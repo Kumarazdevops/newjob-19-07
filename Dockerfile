@@ -1,4 +1,5 @@
 FROM ubuntu
 RUN apt-get update
 RUN apt-get install apache2 -y
-ENTRYPOINT apachect1 -D FOREGROUND
+COPY index.html /var/www/html
+CMD ["apachect1", "-D", "FOREGROUND"]
